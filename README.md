@@ -7,8 +7,49 @@ Direct install android APK WITHOUT system installer UI, especially useful when C
 # Roadmap
 
 - [x] 手把手教程（复杂）
-- [] APK直装应用（简单）
+- [ ] English Tutorial (Professional)
+- [ ] APK直装应用（简单）
 
 # 中文教程
 
+## 安装Shizuku
+
+Shizuku安装地址（选1个能下载的就行）：
+
+* https://www.coolapk.com/apk/moe.shizuku.privileged.api （酷安）
+* https://github.com/RikkaApps/Shizuku/releases （github）
+
+## 配置Shizuku
+
+然后前往 https://shizuku.rikka.app/zh-hans/guide/setup/ 把Shizuku配置起来，这步很重要！
+
+## 安装sShell
+
+前往 https://f-droid.org/zh_Hans/packages/in.sunilpaulmathew.ashell/ 下载并安装aShell
+
+## 如何下载&直接安装APK
+
+下载你的apk，建议下载到“下载”目录下，记住文件名，如 abc.apk
+
+启动aShell（如果Shizuku要授权，则允许授权）
+
+在aShell中粘贴命令（如果是其它路径或其它文件名，则视情况修改）：
+
+```bash
+export APK_PATH=/sdcard/Download/abc.apk && APK_SIZE=$(stat --printf="%s" ${APK_PATH}) && cat ${APK_PATH} | pm install -S ${APK_SIZE}
+```
+
+回车执行，如果最后展示
+
+```bash
+Success
+```
+
+恭喜，直接安装成功！
+
+Via [https://creke.net/842.html](https://creke.net/842.html)
+
+
 # English Tutorial
+
+TBD
